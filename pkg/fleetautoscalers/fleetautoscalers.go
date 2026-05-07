@@ -888,6 +888,7 @@ func emitChainPolicyEvent(fasLog *FasLogger, chainID string, chainType string) {
 		eventType = corev1.EventTypeNormal // Use Normal for success
 	}
 
+	
 	// Emit the event
 	fasLog.recorder.Eventf(fasLog.fas, eventType, "ChainPolicy", eventMessage)
 }
